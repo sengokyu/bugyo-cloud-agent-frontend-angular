@@ -1,0 +1,71 @@
+<app-overlay-spinner [observer]="inProgress$"></app-overlay-spinner>
+<form class="form" #bugyoForm>
+  <p>
+    <mat-form-field>
+      <mat-label>
+        <mat-icon matPrefix>domain</mat-icon>
+        テナントコード</mat-label
+      >
+      <input
+        type="text"
+        matInput
+        placeholder="テナントコード"
+        required
+        [(ngModel)]="item.tenantCode"
+        name="tenant"
+        class="input"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>
+        <mat-icon matPrefix>person</mat-icon>
+        ログインID</mat-label
+      >
+      <input
+        type="text"
+        matInput
+        placeholder="ログインID"
+        required
+        autocomplete="username"
+        [(ngModel)]="item.username"
+        name="username"
+        class="input"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>
+        <mat-icon matPrefix>password</mat-icon>
+        パスワード</mat-label
+      >
+      <input
+        type="password"
+        matInput
+        placeholder="パスワード"
+        required
+        autocomplete="current-password"
+        [(ngModel)]="item.password"
+        name="password"
+        class="input"
+      />
+    </mat-form-field>
+  </p>
+</form>
+
+<div class="actions">
+  <div>
+    <button mat-fab color="primary" (click)="onClickPunch('ClockIn')">
+      <mat-icon>flight_land</mat-icon>
+    </button>
+    <div class="fab-caption">出勤</div>
+  </div>
+  <div>
+    <button mat-fab color="accent" (click)="onClickPunch('ClockOut')">
+      <mat-icon>flight_takeoff</mat-icon>
+    </button>
+    <div class="fab-caption">退勤</div>
+  </div>
+</div>

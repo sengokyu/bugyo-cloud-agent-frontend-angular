@@ -1,0 +1,10 @@
+<ng-container *ngIf="observer">
+  <ng-container *ngIf="observer | async; else spinner"
+    ><!-- Nothing to show when completed. --></ng-container
+  >
+</ng-container>
+<ng-template #spinner>
+  <div class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
