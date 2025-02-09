@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,22 +15,16 @@ import { AppComponent } from './app.component';
 import { BugyoTimecardComponent } from './bugyo-timecard/bugyo-timecard.component';
 import { OverlaySpinnerComponent } from './overlay-spinner/overlay-spinner.component';
 
-@NgModule({
-  declarations: [AppComponent, BugyoTimecardComponent, OverlaySpinnerComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatProgressSpinnerModule,
-    MatSnackBarModule,
-    MatToolbarModule,
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent, BugyoTimecardComponent, OverlaySpinnerComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatIconModule,
+        MatInputModule,
+        MatProgressSpinnerModule,
+        MatSnackBarModule,
+        MatToolbarModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
