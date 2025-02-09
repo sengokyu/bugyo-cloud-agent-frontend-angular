@@ -1,6 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog, MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClockType } from 'bugyo-cloud-client/dist/models/punch-info';
 import { Subject } from 'rxjs';
 import { BugyoAgentClientService } from './bugyo-agent-client.service';
