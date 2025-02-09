@@ -121,6 +121,5 @@
         }
       }
     }
-  },
-  "defaultProject": "bugyo-agent-web"
+  }
 }
