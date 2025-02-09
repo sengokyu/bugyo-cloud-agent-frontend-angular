@@ -3,7 +3,10 @@ import { TestBed } from '@angular/core/testing';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 
-@Directive({ selector: 'app-bugyo-timecard' })
+@Directive({
+    selector: 'app-bugyo-timecard',
+    standalone: false
+})
 class FakeBugyoTimecard {}
 
 describe('AppComponent', () => {

@@ -11,7 +11,10 @@ import { Observable } from 'rxjs';
 import { BugyoAgentClientService } from './bugyo-agent-client.service';
 import { BugyoTimecardComponent } from './bugyo-timecard.component';
 
-@Directive({ selector: 'app-overlay-spinner' })
+@Directive({
+    selector: 'app-overlay-spinner',
+    standalone: false
+})
 class FakeOverlaySpinner {
   @Input()
   public observer?: Observable<any>;
