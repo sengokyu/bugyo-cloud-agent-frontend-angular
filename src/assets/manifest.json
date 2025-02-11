@@ -4,8 +4,8 @@
   "theme_color": "#2196f3",
   "background_color": "#c0c0c0",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/bugyo-cloud-agent/",
+  "start_url": "/bugyo-cloud-agent/",
   "icons": [
     {
       "src": "icons/icon-120.png",
