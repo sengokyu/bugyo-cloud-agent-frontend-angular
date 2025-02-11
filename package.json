@@ -5,14 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production",
+    "build:prod": "ng build --configuration production --base-href /bugyo-cloud-agent/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "predeploy": "npm run build:prod",
-    "deploy": "npm run azcopy",
-    "preazcopy": "az account set --subscription \"$npm_config_azure_subscription\"",
-    "azcopy": "az storage copy -s ./dist/bugyo-agent-web/\\* -d $npm_config_azcopy_dest --recursive"
+    "deploy": "npm run s3sync",
+    "s3sync": "aws s3 sync ./dist/bugyo-agent-web/browser/ $npm_config_dest"
   },
   "private": true,
   "dependencies": {
