@@ -20,16 +20,10 @@ npm run test
 
 ## Deploying to azure blob storage
 
-Azure サブスクリプション ID を設定
-
-```bash
-npm config set azure.subscription 'AzureサブスクリプションID'
-```
-
 ファイルのコピー先を設定
 
 ```bash
-npm config set azcopy.dest 'http://your.blob.windows.net/$web'
+npm config set dest='s3://BUCKET-NAME/base-path/'
 ```
 
 ```bash
