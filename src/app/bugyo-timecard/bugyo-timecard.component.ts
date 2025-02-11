@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ClockType } from 'bugyo-cloud-client/dist/models/punch-info';
 import { Subject } from 'rxjs';
+import { ClockType } from '../types';
 import { BugyoAgentClientService } from './bugyo-agent-client.service';
 import { QueueItem } from './queue-item';
 import { TenantCodeService } from './tenant-code.service';
 
 @Component({
-    selector: 'app-bugyo-timecard',
-    templateUrl: './bugyo-timecard.component.html',
-    styleUrls: ['./bugyo-timecard.component.scss'],
-    standalone: false
+  selector: 'app-bugyo-timecard',
+  templateUrl: './bugyo-timecard.component.html',
+  styleUrls: ['./bugyo-timecard.component.scss'],
+  standalone: false,
 })
 export class BugyoTimecardComponent implements OnInit {
   item: QueueItem = {};
@@ -62,10 +62,10 @@ export class BugyoTimecardComponent implements OnInit {
  * 送信エラーダイアログ
  */
 @Component({
-    template: `<h3 mat-dialog-title>送信エラー</h3>
+  template: `<h3 mat-dialog-title>送信エラー</h3>
     <div mat-dialog-content>
       <p>送信に失敗しました。</p>
     </div>`,
-    standalone: false
+  standalone: false,
 })
 export class ErrorMessageDialog {}

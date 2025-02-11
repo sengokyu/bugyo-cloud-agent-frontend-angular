@@ -1,4 +1,4 @@
-import { ClockType } from 'bugyo-cloud-client';
+import { ClockType } from '../types';
 
 export interface QueueItem {
   tenantCode?: string;
